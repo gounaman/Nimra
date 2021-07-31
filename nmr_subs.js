@@ -254,7 +254,7 @@ function clear1and2() {
 
 function numberWithCommas(str) {
 
-	return (str).toLocaleString('en', { minimumFractionDigits: 3, maximumFractionDigits: 3 });
+	return (str).toLocaleString('en', { minimumFractionDigits: 0, maximumFractionDigits: 15 });
 
 }
 
