@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+	The MIT License (MIT)
+	Copyright © 2021 copyright Ali Hazzah
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+	THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<head>
+	<title>Nimra</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="English/Arabic calculator.">
+	<meta name="author" content="علي هزاع">
+	<link rel="stylesheet" type="text/css" href="./nmr.css">
+</head>
+
+<body>
+	<div class="root">
+
+		<div id="nimra" class="calculator">
+
+			<nav class="menu">
+
+				<! –– Customizable menu section ––>
+
+			</nav>
+
+			<div class="header">
+
+				<div class="box1" onClick=showInfo();>
+					<div class="appName">نمرة</div>
+					<div class="tld">ne</div>
+				</div>
+
+
+				<div class="box2">
+					<div id="infoID" class="info">
+						محجوز للمستقبل...
+					</div>
+				</div>
+
+			</div>
+
+			<div id="expression" class="expression" dir="rtl">٠</div>
+			<div id="translation" class="translation">0</div>
+			<div id="result" class="result">جاهز</div>
+
+			<div class="keypad">
+
+				<div id="col1" class="col">
+
+					<div id="percent" class="func">&#1642;</div>
+					<div id="3" class="numeral">۳</div>
+					<div id="6" class="numeral">٦</div>
+					<div id="9" class="numeral">٩</div>
+					<div id="del" class="func"><a id="deltxt" class="func">del</a></div>
+
+				</div>
+
+				<div id="col2" class="col">
+
+					<div id="tog" class="func">⭮</div>
+					<div id="2" class="numeral">۲</div>
+					<div id="5" class="numeral">٥</div>
+					<div id="8" class="numeral">٨</div>
+					<div id="0" class="numeral">٠</div>
+
+
+				</div>
+
+				<div id="col3" class="col">
+
+					<div id="plusmin" class="func">&#177;</div>
+					<div id="1" class="numeral">۱</div>
+					<div id="4" class="numeral">٤</div>
+					<div id="7" class="numeral">٧</div>
+					<div id="decimal" class="dec">٫</div>
+
+				</div>
+
+				<div id="col4" class="col">
+
+					<div id="/" class="operator">&#247;</div>
+					<div id="*" class="operator">&#215;</div>
+					<div id="-" class="operator">&#8722;</div>
+					<div id="+" class="operator">&#43</div>
+					<div id="clr" class="func"><a id="clrtxt" class="func">clr</a></div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src = "./nmr_tokenizer.js"></script>
+	<script src= "./nmr_subs.js"></script>
+	<script src= "./nmr_mainline.js"></script>
+
+</body>
+
+</html>

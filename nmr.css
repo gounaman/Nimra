@@ -1,0 +1,184 @@
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+
+/*
+The MIT License (MIT)
+Copyright © 2021 Ali Hazzah
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+* {
+	margin: 5px;
+	padding: 2px;
+}
+
+html, body {
+	background-color: #333;
+	color: #3b3b3b;
+}
+
+.root {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.calculator {
+	width: 350px;
+	min-height: 60vh;
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(11, 104, 202, 1) 11%, rgba(84, 95, 103, 1) 26%, rgba(65, 121, 137, 1) 46%, rgba(33, 165, 194, 1) 64%, rgba(14, 192, 229, 1) 75%, rgba(45, 132, 150, 1) 86%, rgba(0, 212, 255, 1) 96%);
+	font-family: 'Noto Naskh Arabic', serif;
+	font-size: 1.5em;
+	border-radius: 15px;
+	cursor: pointer;
+	padding: 0;
+	user-select: none;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+}
+
+.box1 {
+	display: flex;
+	flex-direction: row;
+}
+
+.appName {
+	font-size: 1.8em;
+	font-weight: bolder;
+	border-radius: 50%;
+	background: transparent;
+	border: 3px solid white;
+}
+
+.tld {
+	font-size: 1.8em;
+	margin-left: -5px;
+}
+
+.box2 {
+	display: flex;
+	flex-direction: row;
+}
+
+.info {
+	font-size: medium;
+	width: 180px;
+	height: 90px;
+	overflow: auto;
+	visibility: hidden;
+	margin-left: -8px;
+	line-height: 1.5em;
+	border: 2px solid #fff;
+	color: black;
+	background: #fff;
+	word-wrap: normal;
+	word-break: normal;
+}
+
+#infoID {
+	direction: rtl;
+}
+
+.expression {
+	height: auto;
+	overflow: auto;
+	background: white;
+	visibility: visible;
+	font-size: 1.5rem;
+}
+
+.translation {
+	height: auto;
+	overflow: auto;
+	background: white;
+	direction: ltr;
+	visibility: visible;
+	font-size: 1.5rem;
+}
+
+.result {
+	overflow: auto;
+	background: white;
+	direction: rtl;
+	font-size: 2rem;
+}
+
+.keypad {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-content: center;
+	font-size: xx-large;
+}
+
+.func, .numeral, .operator, .dec, .k {
+	display: grid;
+	text-align: center;
+	height: auto;
+	width: auto;
+}
+
+.numeral {
+	transition: all .2s ease-in-out;
+	background: white;
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+.numeral:hover {
+	transform: scale(1.05);
+}
+
+.func, .operator {
+	background: #fdf4e7;
+}
+
+.k, .dec, .result {
+	background: white;
+}
+
+#clrtxt, #deltxt {
+	font-size: 24px;
+	background-color: #c9c9c9;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
+	border-radius: 50%;
+}
+
+#del, #clr {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+#clr a:hover {
+	background-color: #ffb39a;
+}
+
+#del a:hover {
+	background-color: #b7fbee;
+}
+
+/* for future menu icons */
+
+svg:hover {
+	fill: rgba(11, 104, 202, 1);
+}
+
+/* EOF */
