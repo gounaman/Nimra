@@ -110,9 +110,9 @@ function handleOperator(ev) {
 
 	if (token === tokenizer.getPreviousToken) {
 		if (isArabic()) {
-			nmr[3].textContent = "مكرر" + " " + token;
+			_nmr[3].textContent = "مكرر" + " " + token;
 		} else {
-			nmr[3].textContent = "Duplicate" + " " + token;
+			_nmr[3].textContent = "Duplicate" + " " + token;
 		}
 		return;
 	}
