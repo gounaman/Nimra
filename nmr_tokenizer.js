@@ -239,6 +239,9 @@ class Tokenizer {
     clearAll() {
 
         this.#tokens = [];
+        this.#previous_token = null;
+        this.#previous_token_type = null;
+
         return true;
 
     }
