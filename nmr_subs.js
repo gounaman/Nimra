@@ -119,7 +119,7 @@ function handleOperator(ev) {
 
 	res = tokenizer.addToken(token, token_type);
 	if (res === false) {
-		reset();
+		handleDelete();
 		return;
 	}
 
