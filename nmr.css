@@ -41,6 +41,12 @@ html, body {
 	user-select: none;
 }
 
+@media only screen and (max-height: 896px) {
+	.calculator {
+		min-height: 29vh;
+	}
+}
+
 .menu {
 	display: flex;
 	flex-direction: row;
