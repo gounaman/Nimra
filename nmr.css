@@ -41,7 +41,12 @@ html, body {
 	user-select: none;
 }
 
-@media only screen and (max-height: 896px) {
+/*  iPhone 12 Pro Max */
+
+@media only screen 
+    and (device-width: 428px) 
+    and (device-height: 926px) 
+    and (-webkit-device-pixel-ratio: 3) {
 	.calculator {
 		min-height: 29vh;
 	}
