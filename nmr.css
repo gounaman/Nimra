@@ -52,6 +52,12 @@ html, body {
 	}
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+.calculator {
+		min-height: 32vh;
+	}
+}
+
 .menu {
 	display: flex;
 	flex-direction: row;
