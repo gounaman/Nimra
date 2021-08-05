@@ -124,7 +124,6 @@ html, body {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-areas: "a";
 	column-gap: 1px;
 	row-gap: 1px;
 	position: relative;
@@ -185,15 +184,15 @@ nav {
 	position: absolute;
 	background: #fdf4e7;
 	visibility: hidden;
-	top: 0;
+	top: 7px;
 	bottom: 0;
 	left: 0;
-	grid-area: a;
+	width: 72%;
+	height: 18.3%;
 }
 
 #menu-options {
-	font-family: monospace;
-	font-size: 1.8em;
+	font-size: 1em;
 	list-style: none;
 	text-decoration: none;
 	color: black;
