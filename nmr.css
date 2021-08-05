@@ -135,6 +135,7 @@ html, body {
 .col {
 	font-size: xx-large;
 	width: 100%;
+	height: 100%;
 	justify-self: center;
 }
 
