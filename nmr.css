@@ -123,7 +123,7 @@ html, body {
 	min-height: 60vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
 	column-gap: 1px;
 	row-gap: 1px;
 	position: relative;
