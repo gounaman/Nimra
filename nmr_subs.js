@@ -12,6 +12,22 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
 
 /* SUBROUTINES */
 
+
+function slide() {
+	const el1 = document.getElementById("slider");
+
+	if (_Globals.previouslyToggled === 0) {
+		el1.setAttribute("style", "visibility:visible");
+	} else {
+		el1.setAttribute("style", "visibility:hidden");
+	}
+
+	_Globals.previouslyToggled === 1 ?
+		(_Globals.previouslyToggled = 0) : (_Globals.previouslyToggled = 1);
+
+	return true;
+}
+
 function showInfo() {
 	let infoEl = document.getElementById("infoID");
 	(window.getComputedStyle(infoEl).visibility === "hidden") ?
@@ -402,6 +418,20 @@ function handlePercent() {
 	}
 
 
+}
+
+function copyExpr(el) {
+
+	const content = _nmr[el].textContent;
+
+	navigator.clipboard.writeText(content)
+		.then(() => {
+			return true
+		})
+		.catch(err => {
+			console.log('Clipboard operation unsuccessful', err);
+			return false;
+		})
 }
 
 // EOF
