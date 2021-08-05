@@ -102,6 +102,16 @@ _nmr[0].addEventListener("click", getClickedID);
 function getClickedID(event) {
 
 	const ev = event.target;
+	
+	if (ev.id === "cpAr") {
+		copyExpr(1);
+		return;
+	}
+
+	if (ev.id === "cpRes") {
+		copyExpr(3);
+		return;
+	}
 
 	if (ev.id === "tog") {
 		toggleKeypad();
