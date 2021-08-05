@@ -1,16 +1,15 @@
 /*
 The MIT License (MIT)
 Copyright © 2021 Gounaman
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), 
-to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+@font-face {
+	font-family: 'Noto Naskh Arabic', serif;
+	src: url("C:\WINDOWS\FONTS\NotoNaskhArabic-Regular");
+}
 
 * {
 	margin: 5px;
@@ -31,44 +30,16 @@ html, body {
 
 .calculator {
 	width: 350px;
-	min-height: 60vh;
+	min-height: 700px;
+	max-height: 800px;
 	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(11, 104, 202, 1) 11%, rgba(84, 95, 103, 1) 26%, rgba(65, 121, 137, 1) 46%, rgba(33, 165, 194, 1) 64%, rgba(14, 192, 229, 1) 75%, rgba(45, 132, 150, 1) 86%, rgba(0, 212, 255, 1) 96%);
 	font-family: 'Noto Naskh Arabic', serif;
 	font-size: 1.5em;
 	border-radius: 15px;
 	cursor: pointer;
 	padding: 0;
-	user-select: none;
-}
-
-/*  iPhone 12 Pro Max */
-
-@media only screen 
-    and (device-width: 428px) 
-    and (device-height: 926px) 
-    and (-webkit-device-pixel-ratio: 3) {
-	.calculator {
-		min-height: 29vh;
-	}
-}
-
-/*  iPhone 6  */
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-.calculator {
-		min-height: 32vh;
-	}
-}
-
-.menu {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	height: 24px;
-	padding: 0;
 	margin: 0;
-	border-top-right-radius: 15px;
-	border-top-left-radius: 15px;
+	user-select: none;
 }
 
 .header {
@@ -146,15 +117,29 @@ html, body {
 	font-size: 2rem;
 }
 
-.keypad {
+.container {
+	color: black;
+	background: transparent;
+	min-height: 60vh;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	justify-content: center;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-areas: "a";
+	column-gap: 1px;
+	row-gap: 1px;
+	position: relative;
+	border-radius: 15px;
+	margin: 0;
+	padding: 0;
+}
+
+.col {
 	font-size: xx-large;
+	width: 100%;
+	justify-self: center;
 }
 
 .func, .numeral, .operator, .dec, .k {
-	display: grid;
 	text-align: center;
 	height: auto;
 	width: auto;
@@ -180,28 +165,81 @@ html, body {
 
 #clrtxt, #deltxt {
 	font-size: 24px;
-	background-color: #c9c9c9;
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, .5);
-	border-radius: 50%;
 }
 
-#del, #clr {
-	background-color: transparent;
+/* menu styling */
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+#slider {
+	position: absolute;
+	background: #fdf4e7;
+	visibility: hidden;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	grid-area: a;
+}
+
+#menu-options {
+	font-family: monospace;
+	font-size: 1.8em;
+	list-style: none;
 	text-decoration: none;
+	color: black;
+	transition: background-color .5s;
 }
 
-#clr a:hover {
-	background-color: #ffb39a;
+#adv, #pref {
+	color: grey;
 }
 
-#del a:hover {
-	background-color: #b7fbee;
+li:hover {
+	background-color: rgba(0, 212, 255, 1);
 }
 
-/* for future menu icons */
+/* device screen sizes */
 
-svg:hover {
-	fill: rgba(11, 104, 202, 1);
+/*  iPhone 12 Pro Max */
+
+@media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+	.calculator {
+		min-height: 29vh;
+	}
+}
+
+/* iPhone X */
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+	.calculator {
+		max-height: 30vh;
+	}
+}
+
+/* iPhone 6/7/8 */
+
+@media (max-aspect-ratio: 16/9) {
+	.calculator {
+		max-height: 40vh;
+	}
+}
+
+/* Galaxy S9  
+
+@media (max-aspect-ratio: 0.4864864864864865) {
+	.calculator {
+		max-height: 36vh;
+	}
 }
 
 /* EOF */
