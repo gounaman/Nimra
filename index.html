@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-	
+
 <head>
 	<title>Nimra</title>
 	<meta charset="utf-8" />
 	<meta name="description" content="English/Arabic calculator.">
 	<meta name="author" content="علي هزاع">
 	<link rel="stylesheet" type="text/css" href="./nmr.css">
+	<noscript>Your browser has disabled JavaScript!</noscript>
 </head>
-	
+
 <!--
 	The MIT License (MIT)
 	Copyright © 2021 copyright Gounaman
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”),
-	to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
-	and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 	The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-	THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- 	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 -->
+
 
 <body>
 	<div class="root">
 
 		<div id="nimra" class="calculator">
 
-			<nav class="menu">
+			<nav class="nav-bar">
 
-				<! –– Customizable menu section ––>
+				<svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" onclick="slide()" 
+				height="24px" width="24px" viewBox="0 0 24 24">
+					<path d="M0 0h24v24H0z" fill="none"/>
+					<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+					<style>
+						#menu-icon {
+							fill: white;
+							stroke: "none";
+							stroke-width: "32px";
+							pointer-events: "visible";
+							transition: all .2s ease-in-out;
+						}
 
+						#menu-icon:hover {
+							transform: scale(1.5);
+						}
+					</style>
+				</svg>
 			</nav>
 
 			<div class="header">
@@ -52,7 +66,7 @@
 			<div id="translation" class="translation">0</div>
 			<div id="result" class="result">جاهز</div>
 
-			<div class="keypad">
+			<div class="container">
 
 				<div id="col1" class="col">
 
@@ -71,7 +85,6 @@
 					<div id="5" class="numeral">٥</div>
 					<div id="8" class="numeral">٨</div>
 					<div id="0" class="numeral">٠</div>
-
 
 				</div>
 
@@ -96,17 +109,25 @@
 
 				</div>
 
+				<div id="slider">
+					<ul id="menu-options">
+						<li id="bas"><a>Basic</a></li>
+						<li id="adv"><a>Advanced</a></li>
+						<li><a id="cpAr">&#128203; formula</a></li>
+						<li><a id="cpRes">&#128203; result</a></li>
+						<li id="pref"><a>Preferences</a></li>
+					</ul>
+				</div>
+
 			</div>
 
 		</div>
 
 	</div>
-	
-	<script src = "./nmr_tokenizer.js" defer></script>
-	<script src= "./nmr_subs.js" defer></script>
-	<script src= "./nmr_mainline.js" defer></script>
-	<noscript>Your browser has disabled JavaScript!</noscript>
-	
+
+	<script src="./nmr_tokenizer.js"></script>
+	<script src="./nmr_subs.js"></script>
+	<script src="./nmr_mainline.js"></script>
 
 </body>
 
