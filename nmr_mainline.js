@@ -107,6 +107,11 @@ function getClickedID(event) {
 		copyExpr(1);
 		return;
 	}
+	
+	if (ev.id === "cpEn") {
+		copyExpr(2);
+		return;
+	}
 
 	if (ev.id === "cpRes") {
 		copyExpr(3);
