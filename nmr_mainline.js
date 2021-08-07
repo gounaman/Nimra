@@ -92,6 +92,7 @@ const _Globals = {
 	numericKeys: getByClass("numeral"),
 	space: '\u0020',
 	arr: Object.keys(translater)
+	previouslyToggled: 0
 }
 
 const tokenizer = new Tokenizer();
@@ -102,6 +103,11 @@ _nmr[0].addEventListener("click", getClickedID);
 function getClickedID(event) {
 
 	const ev = event.target;
+	
+	if (ev.id === "nav") {
+		slide();
+		return;
+	}
 	
 	if (ev.id === "cpAr") {
 		copyExpr(1);
