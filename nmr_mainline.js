@@ -91,7 +91,7 @@ const _Globals = {
 	pct: document.querySelector("#percent"),
 	numericKeys: getByClass("numeral"),
 	space: '\u0020',
-	arr: Object.keys(translater)
+	arr: Object.keys(translater),
 	previouslyToggled: 0
 }
 
