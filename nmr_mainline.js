@@ -104,6 +104,9 @@ function getClickedID(event) {
 
 	const ev = event.target;
 	
+	console.log(ev)l
+	alert("debug");
+	
 	if (ev.id === "nav") {
 		slide();
 		return;
