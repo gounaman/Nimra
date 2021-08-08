@@ -104,7 +104,7 @@ function getClickedID(event) {
 
 	const ev = event.target;
 	
-	console.log(ev)l
+	console.log(ev);
 	alert("debug");
 	
 	if (ev.id === "nav") {
