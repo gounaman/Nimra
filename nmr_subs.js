@@ -242,7 +242,8 @@ function updateTokenizer(token, type) {
 
 function switch2Afrangi(val) {
 
-	const layout = ["1", "4", "7", "2", "5", "8", "0", "3", "6", "9"];
+	const layout = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+
 
 	for (var i = 0; i < 10; i++) {
 		val[i].textContent = layout[i];
@@ -253,7 +254,7 @@ function switch2Afrangi(val) {
 
 function switch2Arabic(val) {
 
-	const layout = ["۳", "٦", "٩", "۲", "٥", "٨", "٠", "۱", "٤", "٧"];
+	const layout = ["۳","۲","۱", "٦", "٥","٤", "٩", "٨", "٧", "٠"];
 
 	for (var i = 0; i < 10; i++) {
 		val[i].textContent = layout[i];
