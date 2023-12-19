@@ -216,7 +216,7 @@ li:hover {
     and (height: 932px) 
     and (-webkit-device-pixel-ratio: 3) {
 
-	min-height: 900px;
+	height: 90vh;
     }
 
 /*  iPhone 12 Pro Max */
