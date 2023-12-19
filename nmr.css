@@ -216,7 +216,11 @@ li:hover {
     and (height: 932px) 
     and (-webkit-device-pixel-ratio: 3) {
 
-	height: 90vh;
+	.calculator {
+
+		background: red;
+
+	}
     }
 
 /*  iPhone 12 Pro Max */
