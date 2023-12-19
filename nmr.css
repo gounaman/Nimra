@@ -204,6 +204,8 @@ li:hover {
 	background-color: rgba(0, 212, 255, 1);
 }
 
+.expression, .result { overflow: hidden; }
+
 /* device screen sizes */
 
 /*  iPhone 12 Pro Max */
