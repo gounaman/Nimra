@@ -221,7 +221,10 @@ li:hover {
 
 /* Galaxy S8 */
 
-@media only screen and (min-width: 360px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 4),
+                    only screen and (min--moz-device-pixel-ratio: 4),
+                    only screen and (-o-min-device-pixel-ratio: 4/1),
+                    only screen and (min-device-pixel-ratio: 4) {
 	.calculator {
 		margin-top: 600px;
 		transform: scale(2.2); 
