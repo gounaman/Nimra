@@ -223,8 +223,8 @@ li:hover {
 
 @media only screen and (-webkit-device-pixel-ratio: 4) {
 	.calculator {
-		margin-top: 600px;
-		transform: scale(2.2);
+		/* margin-top: 600px;
+		transform: scale(2.2); */
 		background: #009000;
 	}
 }
