@@ -216,8 +216,7 @@ li:hover {
 
 @media only screen and (-webkit-device-pixel-ratio: 3) {
 	.calculator {
-		/*margin-top: 400px;
-		transform: scale(0.8);*/
+		margin-top: -400px;
 		background: cornflowerblue;
 		/*background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(11, 104, 202, 1) 11%, rgba(84, 95, 103, 1) 26%, rgba(65, 121, 137, 1) 46%, rgba(33, 165, 194, 1) 64%, rgba(14, 192, 229, 1) 75%, rgba(45, 132, 150, 1) 86%, rgba(0, 212, 255, 1) 96%);*/
 	}
