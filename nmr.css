@@ -205,55 +205,27 @@ li:hover {
 }
 
 .expression, .result { overflow: hidden; }
+/* Responsive Styling for Mobile */
 
-/* device screen sizes */
+
+/* iPhones */
 
 
-/* iPhone 14 Pro Max, iPhone 15 Plus and iPhone 15 Pro Max 
-
-@media only screen 
-    and (width: 430px) 
-    and (height: 932px) 
-    and (-webkit-device-pixel-ratio: 3)  {
-   
-.calculator {
-	
-	min-height: 80vh;
-}
-	
-
-	
-    }
-
-/*  iPhone 12 Pro Max */
-
-@media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (-webkit-device-pixel-ratio: 3) {
 	.calculator {
-		min-height: 29vh;
+		margin-top: 600px;
+		transform: scale(2.2);
+		background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(11, 104, 202, 1) 11%, rgba(84, 95, 103, 1) 26%, rgba(65, 121, 137, 1) 46%, rgba(33, 165, 194, 1) 64%, rgba(14, 192, 229, 1) 75%, rgba(45, 132, 150, 1) 86%, rgba(0, 212, 255, 1) 96%);
 	}
 }
 
-/* iPhone X */
+/* Galaxy 6,7,8 */
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (-webkit-device-pixel-ratio: 4) {
 	.calculator {
-		max-height: 30vh;
-	}
-}
-
-/* iPhone 6/7/8 */
-
-@media (max-aspect-ratio: 16/9) {
-	.calculator {
-		max-height: 40vh;
-	}
-}
-
-/* Galaxy S9  */
-
-@media (max-aspect-ratio: 0.4864864864864865) {
-	.calculator {
-		max-height: 36vh;
+		margin-top: 600px;
+		transform: scale(2.2);
+		background: #009000;
 	}
 }
 
