@@ -224,7 +224,7 @@ li:hover {
                     only screen and (max-width: 360px),
          {
 	.calculator {
-		margin-top: -300px;
+		margin-top: -400px;
 		transform: scale(0.8); 
 		background: #009000;
 	}
