@@ -55,7 +55,7 @@ html, body {
 }
 
 .appName {
-	font-size: 1.8em;
+	/*font-size: 1.8em;*/
 	font-weight: bolder;
 	border-radius: 50%;
 	background: transparent;
