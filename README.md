@@ -11,3 +11,5 @@ Nimra relies heavily on a JavaScript class (the "tokenizer"), which dynamically 
 The tokenizer hides the implementation details that validate parsed expressions.
 Nimra has been designed to be easily customized by other developers who may wish to add dropdown menus, additional functions, 
 or make use of an "info box" that sits at the top of the application.
+
+Nimra.one™ is a trademark of Enigma LLC.
